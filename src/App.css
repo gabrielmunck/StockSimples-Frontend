@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #f0f0f0;
+    padding: 0;
+    transition: background-color 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #387d9c;
+    padding: 20px 0;
+}
+.titulo {
+    color: #f0f0f0;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title-produtos {
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 150px;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.container-produtos {
+    margin-top: 20px;
+    padding: 0px 150px;
 }
 
-.App-link {
-  color: #61dafb;
+.export-div {
+    display: flex;
+    justify-content: start;
+    width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.export-button {
+    background-color: #4caf50;
+    display: flex;
+    justify-content: center;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.export-button:hover {
+    background-color: #45a049;
+}
+
+.table-wrapper {
+    overflow-x: scroll;
+    margin-top: 80px;
+    max-width: 100%;
+}
+
+.tabela-produtos {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tabela-produtos th,
+.tabela-produtos td {
+    padding: 12px;
+    text-align: left;
+    text-transform: capitalize;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabela-produtos th {
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.tabela-produtos tr:hover {
+    background-color: #a8a5a5;
+}
+
+.edit-button {
+    background-color: #387d9c;
+    color: white;
+    border: none;
+    width: 60px;
+    margin-right: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.edit-button:hover {
+    background-color: #000000;
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    width: 60px;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-button:hover {
+    background-color: #d41111;
+}
+.night-mode {
+    background-color: #282c34;
+    color: #ffffff;
+}
+
+.night-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #282c34;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.night-mode .night-mode-toggle {
+    background-color: #f0f0f0;
+    color: #282c34;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        width: 100%;
+        justify-content: center;
+    }
+    .container-produtos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+        width: 100%;
+        overflow: auto;
+    }
+
+    .export-div {
+        justify-content: center;
+    }
+    .export-button {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .edit-button {
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .title-produtos {
+        font-size: 24px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .tabela-produtos {
+        margin: 0;
+    }
 }
